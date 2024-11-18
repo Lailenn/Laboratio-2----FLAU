@@ -1,0 +1,11 @@
+.custom-navbar {
+    background-color: #012030; /* Color de fondo oscuro */
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff; /* Texto de los enlaces en blanco */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #cccccc; /* Color gris claro al pasar el ratón */
+}

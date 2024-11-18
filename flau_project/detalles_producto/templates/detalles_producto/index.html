@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}FLAU{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        .video{
+   justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 28rem;
+    margin: 0 10%;
+}
+.video2{
+    align-items: center;
+    justify-items: center;
+}
+
+    </style>
+</head>
+<body>
+    {% include 'partials/navbar.html' %}
+    
+    <div class="container my-5">
+        <h2 class="fw-bold text-center mb-4">¿Por qué FLAU es especial?</h2>
+
+        <!-- Sección de características -->
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <img src="{% static 'img/r.png' %}" alt="Foto de FLAU" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-md-6">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <h5 class="fw-bold">Interactividad avanzada</h5>
+                        <p>FLAU responde a comandos de voz y puede entablar conversaciones sencillas.</p>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="fw-bold">Asistente para el hogar</h5>
+                        <p>Ayuda con recordatorios, tareas diarias y entretenimiento.</p>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="fw-bold">Tecnología de aprendizaje</h5>
+                        <p>Aprende de las interacciones para personalizar su comportamiento.</p>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="fw-bold">Conectividad</h5>
+                        <p>Compatible con dispositivos inteligentes del hogar para mayor comodidad.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Sección de video -->
+        
+        </div>
+    </div>
+    <div class="mt-5 text-center">
+        <h3 class="fw-bold mb-4">Mira cómo FLAU puede hacer una diferencia en tu vida</h3>
+        <!-- Sección de video -->
+            </div>
+        </div>
+        <div class="video">
+            <iframe class="embed-responsive-item video" src="https://www.youtube.com/embed/8clGaQySa7g" allowfullscreen></iframe>
+
+        </div>
+        <br>
+        <br>
+        <!-- Footer -->
+<footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p class="mb-0">© 2024 FLAU. Todos los derechos reservados.</p>
+      <p class="mb-0">Desarrollado con ❤ por el equipo de FLAU</p>
+      <ul class="list-unstyled d-flex justify-content-center mt-3">
+        <li class="mx-3">
+          <a href="#" class="text-white" title="Facebook">
+            <i class="fab fa-facebook-f"></i> 
+          </a>
+        </li>
+        <li class="mx-3">
+          <a href="#" class="text-white" title="Twitter">
+            <i class="fab fa-twitter"></i> 
+          </a>
+        </li>
+        <li class="mx-3">
+          <a href="#" class="text-white" title="Instagram">
+            <i class="fab fa-instagram"></i> 
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  
+        
+</body>
+</html>

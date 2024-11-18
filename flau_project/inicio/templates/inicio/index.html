@@ -1,0 +1,135 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}FLAU{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!-- Barra de Navegacion -->
+    {% include 'partials/navbar.html' %}
+    <!-- fin de barra -->
+    <img src="{% static 'img/FLAU.png' %}" alt="FLAU" class="img-fluid w-100" style="height: auto;">
+
+    <br>
+
+    <!-- Sección de introducción -->
+    <div class="content1 container my-5">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2 class="display-5 fw-bold mb-4">
+                    Conoce a FLAU, el robot diseñado para facilitar y enriquecer tu vida diaria
+                </h2>
+                <button type="button" class="btn btn-outline-dark btn-lg">
+                    Descubre más
+                </button>
+            </div>
+            <div class="col-md-6">
+                <img src="{% static 'img/r.png' %}" alt="Descripción de la imagen" class="img-fluid rounded shadow-lg">
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Sección de descripción -->
+    <div class="content container my-5">
+        <h1 class="text-center display-5 fw-bold mb-5">
+            ¿Qué es FLAU?
+        </h1>
+        <p class="lead text-center">
+            FLAU es un robot interactivo diseñado para asistir, entretener y adaptarse a tus necesidades diarias. Equipado con tecnología de punta,
+            FLAU aprende de tus preferencias para hacer cada interacción única y personalizada.
+        </p>
+        <p class="text-center fs-5">
+            “Imagina un compañero inteligente que te ayuda en las tareas diarias, que aprende de tus gustos y está siempre listo para facilitar tu vida. Eso es FLAU.”
+        </p>
+    </div>
+
+    <br>
+
+    <div class="content container my-5">
+        <h1 class="text-center display-5 fw-bold mb-5">
+            Características Principales
+        </h1>
+        <br>
+        <div class="container mt-5">
+            <ul class="list-group">
+              <li class="list-group-item">
+                <h5 class="fw-bold">Interactividad</h5>
+                <p>FLAU responde a comandos de voz y reconoce rostros para una experiencia verdaderamente personalizada.</p>
+              </li>
+              <li class="list-group-item">
+                <h5 class="fw-bold">Asistencia Inteligente</h5>
+                <p>Recibe recordatorios, controla dispositivos de tu hogar y organiza tus actividades diarias.</p>
+              </li>
+              <li class="list-group-item">
+                <h5 class="fw-bold">Evolución Continua</h5>
+                <p>Gracias a su tecnología de aprendizaje, FLAU se adapta a tus hábitos con cada interacción.</p>
+              </li>
+            </ul>
+            <br>
+            
+            <div class="text-center mt-4">
+              <h4 class="fw-bold">¡Da el siguiente paso hacia un hogar inteligente con FLAU!</h4>
+              <br>
+              <a href="{% url 'productos' %}" class="btn btn-primary btn-lg mt-2">Compra FLAU</a>
+              <br>
+            </div>
+          </div>
+          
+
+    </div>
+
+    <!-- Scripts de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <br>
+
+    
+
+
+    <br>
+    <!-- Footer -->
+<footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p class="mb-0">© 2024 FLAU. Todos los derechos reservados.</p>
+      <p class="mb-0">Desarrollado con ❤ por el equipo de FLAU</p>
+      <ul class="list-unstyled d-flex justify-content-center mt-3">
+        <li class="mx-3">
+          <a href="#" class="text-white" title="Facebook">
+            <i class="fab fa-facebook-f"></i> 
+          </a>
+        </li>
+        <li class="mx-3">
+          <a href="#" class="text-white" title="Twitter">
+            <i class="fab fa-twitter"></i> 
+          </a>
+        </li>
+        <li class="mx-3">
+          <a href="#" class="text-white" title="Instagram">
+            <i class="fab fa-instagram"></i> 
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <script type="text/javascript">
+    (function(d, t) {
+        var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        v.onload = function() {
+          window.voiceflow.chat.load({
+            verify: { projectID: '6739262f5aea3fb20a8e0069' },
+            url: 'https://general-runtime.voiceflow.com',
+            versionID: 'production'
+          });
+        }
+        v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+    })(document, 'script');
+  </script>
+</body>

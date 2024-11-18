@@ -1,0 +1,146 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}FLAU - Compra{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    {% include 'partials/navbar.html' %}
+
+    <div class="container my-5">
+        <div class="row">
+            <!-- Columna izquierda: Resumen del Producto -->
+            <div class="col-lg-5">
+                <h2 class="fw-bold mb-4">Resumen del Producto</h2>
+                <div class="card">
+                    <img src="{% static 'img/r.png' %}" class="card-img-top" alt="FLAU Robot">
+                    <div class="card-body">
+                        <h5 class="card-title">FLAU Robot Interactivo</h5>
+                        <p class="card-text">Un robot interactivo diseñado para el hogar, capaz de asistir en tareas diarias y ofrecer entretenimiento.</p>
+                        <p class="text-muted">Color: Blanco</p>
+                        <h4 class="fw-bold text-primary">Desde $200</h4>
+                    </div>
+                </div>
+                
+                <!-- Fila adicional para dos imágenes más pequeñas -->
+                <div class="row mt-3">
+                    <div class="col-6">
+                        <img src="{% static 'img/r.png' %}" class="img-fluid rounded" alt="Vista lateral">
+                    </div>
+                    <div class="col-6">
+                        <img src="{% static 'img/r.png' %}" class="img-fluid rounded" alt="Vista trasera">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna derecha: Formulario de Compra -->
+            <div class="col-lg-7">
+                <h2 class="fw-bold text-center mb-4">Formulario de Compra</h2>
+                
+                <!-- Formulario de compra -->
+                <form action="" method="post">
+                    {% csrf_token %}
+                    
+                    <!-- Información de Contacto -->
+                    <h4>Información de Contacto</h4>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre completo" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" id="correo" name="correo" placeholder="Correo electrónico" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Número de teléfono" required>
+                    </div>
+
+                    <!-- Dirección de Envío -->
+                    <h4>Dirección de Envío</h4>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Dirección" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="ciudad" name="ciudad" placeholder="Ciudad" required>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <input type="text" class="form-control" id="estado" name="estado" placeholder="Estado/Provincia" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input type="text" class="form-control" id="codigo_postal" name="codigo_postal" placeholder="Código Postal" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="pais" name="pais" placeholder="País" required>
+                    </div>
+
+                    <!-- Método de Pago -->
+                    <h4>Método de Pago</h4>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="nombre_tarjeta" name="nombre_tarjeta" placeholder="Nombre en la tarjeta" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="numero_tarjeta" name="numero_tarjeta" placeholder="Número de tarjeta de crédito" required>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <input type="text" class="form-control" id="vencimiento" name="vencimiento" placeholder="Fecha de vencimiento (MM/AA)" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input type="text" class="form-control" id="cvv" name="cvv" placeholder="CVV" required>
+                        </div>
+                    </div>
+
+                    <!-- Aceptación de términos y botón de compra -->
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="terminos" name="terminos" required>
+                        <label class="form-check-label" for="terminos">
+                            Acepto los <a href="#">términos y condiciones</a> de la compra.
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary d-block w-100">Realizar Compra</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+<br>
+<br>
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p class="mb-0">© 2024 FLAU. Todos los derechos reservados.</p>
+      <p class="mb-0">Desarrollado con ❤ por el equipo de FLAU</p>
+      <ul class="list-unstyled d-flex justify-content-center mt-3">
+        <li class="mx-3">
+          <a href="#" class="text-white" title="Facebook">
+            <i class="fab fa-facebook-f"></i> 
+          </a>
+        </li>
+        <li class="mx-3">
+          <a href="#" class="text-white" title="Twitter">
+            <i class="fab fa-twitter"></i> 
+          </a>
+        </li>
+        <li class="mx-3">
+          <a href="#" class="text-white" title="Instagram">
+            <i class="fab fa-instagram"></i> 
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  
+</body>
+</html>
